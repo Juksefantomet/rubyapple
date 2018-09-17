@@ -27,6 +27,9 @@ gem install rubyapple
 ## Usage
 
 NOTE! Create the apple_images folder where you invoke the rubyapple command, but do not enter it.
+```rb
+mkdir apple_images
+```
 
 Recommended original file beeing larger then 310x310, that is the current largest scale in this gem.
 ```rb
