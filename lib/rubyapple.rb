@@ -26,4 +26,3 @@ class Rubyapple
   end
 end
 
-Rubyapple.new
