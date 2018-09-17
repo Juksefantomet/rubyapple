@@ -20,7 +20,7 @@ gem install Rubyapple
 
 ## Usage
 
-NOTE! init should check if the name is in use or not, but we check to be certain.
+NOTE! Create the apple_images folder where you invoke the rubyapple command, but do not enter it.
 
 ```rb
 rubyapple picture.png
