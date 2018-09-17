@@ -10,7 +10,12 @@
 > apple-touch-icon-sizexsize.png
 > and
 > apple-touch-icon-sizexsize-precompiled.png
-> 
+ 
+
+## PRE-Installation
+```rb
+sudo apt-get install -f libmagickwand-dev imagemagick
+```
 
 ## Installation
 
