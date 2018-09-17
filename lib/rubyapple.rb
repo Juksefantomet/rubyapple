@@ -1,8 +1,14 @@
 require 'rubygems'
 require 'rmagick'
+require 'fileutils'
 
 class Rubyapple
   def initialize
+    dirname = File.dirname(some_path)
+    unless File.directory?(dirname)
+      FileUtils.mkdir_p(dirname)
+    end
+
     img = Magick::Image.read(ARGV[0])[0].strip!
 
     # apple-touch-icon-sizes.png
