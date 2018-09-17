@@ -15,7 +15,7 @@
 ## Installation
 
 ```rb
-gem install Rubyapple
+gem install rubyapple
 ```
 
 ## Usage
