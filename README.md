@@ -6,9 +6,10 @@
 
 
 >This is Rubyapple
-> A gem to convert a png picture into respective:
+> a gem to convert a png picture into respective:
+>
 > apple-touch-icon-sizexsize.png
-> and
+>
 > apple-touch-icon-sizexsize-precompiled.png
  
 
