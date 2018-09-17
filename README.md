@@ -34,7 +34,7 @@ rubyapple picture.png
 output will be contained in the following folder where you invoked the command
 
 ```rb
-apple_images/*
+cd apple_images/
 ```
 
 ```
