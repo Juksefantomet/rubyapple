@@ -4,7 +4,7 @@ require 'fileutils'
 
 class Rubyapple
   def initialize
-    dirname = File.dirname(some_path)
+    dirname = File.dirname('apple_images')
     unless File.directory?(dirname)
       FileUtils.mkdir_p(dirname)
     end
