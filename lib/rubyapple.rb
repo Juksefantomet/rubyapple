@@ -4,9 +4,11 @@ require 'fileutils'
 
 class Rubyapple
   def initialize
-    dirname = File.dirname('apple_images')
-    unless File.directory?(dirname)
-      FileUtils.mkdir_p(dirname)
+    if !File.directory?('apple_images/')
+      puts "apple_images folder does not exist, please create it and run rubyapple again"
+      puts "----"
+      puts "rubyapple imagename.png"
+      return
     end
 
     img = Magick::Image.read(ARGV[0])[0].strip!
@@ -31,4 +33,3 @@ class Rubyapple
 
   end
 end
-
