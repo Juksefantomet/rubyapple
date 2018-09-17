@@ -33,10 +33,8 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.3'
 
-  spec.add_runtime_dependency 'dry-configurable', '~> 0.7.0'
-  spec.add_runtime_dependency 'rmagick'
-  spec.add_runtime_dependency 'rubygems'
-  spec.add_runtime_dependency 'fileutils'
+  spec.add_runtime_dependency 'rmagick', '~> 2.16.0'
+  spec.add_runtime_dependency 'fileutils', '~> 1.1.0'
 
   spec.add_development_dependency "bundler", '~> 1.16.2'
   spec.add_development_dependency "rake", '~> 12.3', '>= 12.3.1'
