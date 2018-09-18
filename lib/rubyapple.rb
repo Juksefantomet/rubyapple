@@ -4,21 +4,34 @@ require 'fileutils'
 
 class Rubyapple
   def initialize
-    image = Magick::Image.read(ARGV[1])[0].strip!
+  	args = ARGV[0..-1]
+
+  	unless !args[1]
+  		image = Magick::Image.read(args[1])[0].strip!
+  	end
 
     case
-    when ARGV[0] == 'help'
-      puts "Helping you understand"
-      puts "
-
-      rubyapple gen-apple-touch imagename.png -- outputs apple-touch-icon-* files to apple_images/*
-      rubyapple gen-drawables imagename.png   -- outputs drawable-*         files to drawable_images/*
-
-      "
-    when ARGV[0] == 'gen-apple-touch'
+    when args[0] == 'help'
+    	puts "initializing.. help"
+      puts ""
+      puts "rubyapple gen-apple-touch imagename.png"
+      puts " -- outputs apple-touch-icon-* files to apple_images/*"
+      puts ""
+      puts "rubyapple gen-drawables imagename.png"
+      puts " -- outputs drawable-*         files to drawable_images/*"
+      puts ""
+    when args[0] == 'gen-apple-touch'
+    	puts "initializing.. gen-apple-touch"
       generate_apples(image)
-    when ARGV[0] == 'gen-drawables'
+    when args[0] == 'gen-drawables'
+    	puts "initializing.. gen-drawables"
       generate_drawables(image)
+    end
+
+    unless args[0]
+    	puts "correct syntax:"
+    	puts " rubyapple type image.png"
+    	puts "use 'rubyapple help' for more information"
     end
 
   end
@@ -58,7 +71,7 @@ class Rubyapple
     temp = img
 
     path = "drawable_images/"
-    
+
     puts "Generating pictures.. drawable-types"
 
     temp.resize_to_fill(36,36).write(path + "drawable-ldpi-icon.png")
@@ -75,6 +88,5 @@ class Rubyapple
     FileUtils.mkdir_p(folname)
   end
 end
-
 
 Rubyapple.new
