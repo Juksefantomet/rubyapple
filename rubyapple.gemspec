@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{System command to logfile gem}
   spec.description   = %q{A gem to convert argument picture into apple-touch-icon and -precomposed .png files}
-  spec.homepage      = "http://www.github.com/juksefantomet"
+  spec.homepage      = "https://github.com/Juksefantomet/rubyapple"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
