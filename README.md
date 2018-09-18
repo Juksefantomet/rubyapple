@@ -28,20 +28,21 @@ gem install rubyapple
 
 NOTE! Create the apple_images folder where you invoke the rubyapple command, but do not enter it.
 ```rb
-mkdir apple_images
+rubyapple help
 ```
 
-Recommended original file beeing larger then 310x310, that is the current largest scale in this gem.
+Recommended original file beeing larger then 310x310, that is the current largest scaling in this gem.
 ```rb
-rubyapple picture.png
+rubyapple gen-type picture.png
 ```
 
 output will be contained in the following folder where you invoked the command
 
 ```rb
-cd apple_images/
+type_images/
 ```
 
+Example output from `gen-apple-touch` 's `apple_images` folder:
 ```
 user@computer:~/apple_images$ ls -l
 total 840
@@ -74,6 +75,20 @@ total 840
 -rw-rw-r-- 1 user user 15913 Sep 17 17:26 apple-touch-icon-96x96.png
 -rw-rw-r-- 1 user user 15913 Sep 17 17:26 apple-touch-icon-96x96-precomposed.png
 user@computer:~/apple_images$
+```
+
+Example output from `gen-drawables` 's `drawable_images` folder:
+
+```
+user@computer:~/drawable_images$ ls -l
+total 40
+-rw-r--r-- 1 user user  2908 Sep 18 17:23 drawable-hdpi-icon.png
+-rw-r--r-- 1 user user  1318 Sep 18 17:23 drawable-ldpi-icon.png
+-rw-r--r-- 1 user user  1796 Sep 18 17:23 drawable-mdpi-icon.png
+-rw-r--r-- 1 user user  4228 Sep 18 17:23 drawable-xhdpi-icon.png
+-rw-r--r-- 1 user user  7220 Sep 18 17:23 drawable-xxhdpi-icon.png
+-rw-r--r-- 1 user user 10189 Sep 18 17:23 drawable-xxxhdpi-icon.png
+user@computer:~/drawable_images$
 ```
 
 # Cloning/branching:
