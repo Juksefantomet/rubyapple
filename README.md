@@ -11,6 +11,18 @@
 > apple-touch-icon-sizexsize.png
 >
 > apple-touch-icon-sizexsize-precompiled.png
+>
+> drawable-hdpi-icon.png
+>
+> drawable-ldpi-icon.png
+>
+> drawable-mdpi-icon.png
+>
+> drawable-xhdpi-icon.png
+>
+> drawable-xxhdpi-icon.png
+>
+> drawable-xxxhdpi-icon.png
  
 
 ## PRE-Installation
