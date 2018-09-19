@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["larsgrav@gmail.com"]
 
   spec.summary       = %q{System command to logfile gem}
-  spec.description   = %q{A gem to convert argument picture into apple-touch-icon and -precomposed .png files}
+  spec.description   = %q{A gem to replicate argument picture into various icon and mobile types, apple-touch-icon,  *-precomposed, drawables-* type .png files}
   spec.homepage      = "https://github.com/Juksefantomet/rubyapple"
   spec.license       = "MIT"
 

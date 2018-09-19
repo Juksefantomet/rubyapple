@@ -4,15 +4,15 @@ require 'fileutils'
 
 class Rubyapple
   def initialize
-  	args = ARGV[0..-1]
+    args = ARGV[0..-1]
 
-  	unless !args[1]
-  		image = Magick::Image.read(args[1])[0].strip!
-  	end
+    unless !args[1]
+      image = Magick::Image.read(args[1])[0].strip!
+    end
 
     case
     when args[0] == 'help'
-    	puts "initializing.. help"
+      puts "initializing.. help"
       puts ""
       puts "rubyapple gen-apple-touch imagename.png"
       puts " -- outputs apple-touch-icon-* files to apple_images/*"
@@ -21,17 +21,26 @@ class Rubyapple
       puts " -- outputs drawable-*         files to drawable_images/*"
       puts ""
     when args[0] == 'gen-apple-touch'
-    	puts "initializing.. gen-apple-touch"
+      puts "initializing.. gen-apple-touch"
       generate_apples(image)
     when args[0] == 'gen-drawables'
-    	puts "initializing.. gen-drawables"
+      puts "initializing.. gen-drawables"
       generate_drawables(image)
+    when args[0] == 'gen-all'
+      puts "initializing.. generation of all types.."
+      generate_apples(image)
+      generate_drawables(image)
+    else
+      puts "-"
+      puts "did you forget something?"
+      puts "-"
+      puts "use 'rubyapple help' for more information"
     end
 
     unless args[0]
-    	puts "correct syntax:"
-    	puts " rubyapple type image.png"
-    	puts "use 'rubyapple help' for more information"
+      puts "correct syntax:"
+      puts " rubyapple type image.png"
+      puts "use 'rubyapple help' for more information"
     end
 
   end
@@ -74,12 +83,12 @@ class Rubyapple
 
     puts "Generating pictures.. drawable-types"
 
-    temp.resize_to_fill(36,36).write(path + "drawable-ldpi-icon.png")
-    temp.resize_to_fill(48,48).write(path + "drawable-mdpi-icon.png")
-    temp.resize_to_fill(72,72).write(path + "drawable-hdpi-icon.png")
-    temp.resize_to_fill(96,96).write(path + "drawable-xhdpi-icon.png")
-    temp.resize_to_fill(144,144).write(path + "drawable-xxhdpi-icon.png")
-    temp.resize_to_fill(192,192).write(path + "drawable-xxxhdpi-icon.png")
+    temp.resize_to_fill(36, 36).write(path + "drawable-ldpi-icon.png")
+    temp.resize_to_fill(48, 48).write(path + "drawable-mdpi-icon.png")
+    temp.resize_to_fill(72, 72).write(path + "drawable-hdpi-icon.png")
+    temp.resize_to_fill(96, 96).write(path + "drawable-xhdpi-icon.png")
+    temp.resize_to_fill(144, 144).write(path + "drawable-xxhdpi-icon.png")
+    temp.resize_to_fill(192, 192).write(path + "drawable-xxxhdpi-icon.png")
 
     puts "Done!"
   end
