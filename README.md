@@ -107,5 +107,11 @@ user@computer:~/drawable_images$
 
 Make a pull request and make this a better one if you feel like it!
 
+# Issues/Feature requests
+
+Create an issue, tag with bug/feature and describe what is wrong or what you need
+
+For feature request regarding generate_types please specify format size ranges so it can be applied like the above outputs.
+
 -- Juksefantomet
 
