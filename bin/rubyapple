@@ -2,4 +2,4 @@
 
 require 'rubyapple'
 
-Rubyapple.new  
+Rubyapple::Main.new  

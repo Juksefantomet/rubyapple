@@ -2,7 +2,8 @@ require 'rubygems'
 require 'rmagick'
 require 'fileutils'
 
-class Rubyapple
+module Rubyapple
+class Main
   def initialize
     args = ARGV[0..-1]
 
@@ -33,6 +34,8 @@ class Rubyapple
       puts "initializing.. generation of all types.."
       generate_apples(image)
       generate_drawables(image)
+    when args[0] == 'version' || args[0] == '-v'
+      puts "Current rubyapple version: #{Rubyapple::VERSION}"
     else
       puts "-"
       puts "did you forget something?"
@@ -100,4 +103,4 @@ class Rubyapple
     FileUtils.mkdir_p(folname)
   end
 end
-
+end
