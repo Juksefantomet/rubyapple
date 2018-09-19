@@ -14,7 +14,6 @@ class Main
     case
     when args[0] == 'help'
       puts "rubyapple version #{Rubyapple::VERSION}"
-      puts "initializing.. help"
       puts ""
       puts "rubyapple gen-apple-touch imagename.png"
       puts " -- outputs apple-touch-icon-* files to apple_images/*"
