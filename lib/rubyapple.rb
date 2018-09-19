@@ -20,6 +20,9 @@ class Rubyapple
       puts "rubyapple gen-drawables imagename.png"
       puts " -- outputs drawable-*         files to drawable_images/*"
       puts ""
+      puts "rubyapple gen-all imagename.png"
+      puts " -- outputs all types         files to *_images/*"
+      puts ""
     when args[0] == 'gen-apple-touch'
       puts "initializing.. gen-apple-touch"
       generate_apples(image)

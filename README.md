@@ -54,6 +54,12 @@ output will be contained in the following folder where you invoked the command
 type_images/
 ```
 
+or if you're looking for all types
+
+```rb
+rubyapple gen-all picture.png
+```
+
 Example output from `gen-apple-touch` 's `apple_images` folder:
 ```
 user@computer:~/apple_images$ ls -l
