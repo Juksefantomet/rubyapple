@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'rubyapple'
+require 'rubyapple/version'
 
 Rubyapple::Main.new  
