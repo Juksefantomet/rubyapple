@@ -24,6 +24,9 @@ class Main
       puts "rubyapple gen-all imagename.png"
       puts " -- outputs all types         files to *_images/*"
       puts ""
+      puts "rubyapple version | -v"
+      puts " -- display current version of rubyapple"
+      puts ""
     when args[0] == 'gen-apple-touch'
       puts "initializing.. gen-apple-touch"
       generate_apples(image)
